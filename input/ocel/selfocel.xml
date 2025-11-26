@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+  
+  <object-types>
+    <object-type name="frame"> 
+      <attributes/>
+    </object-type>
+    <object-type name="handle">
+      <attributes/>
+    </object-type>
+    <object-type name="wheel"> 
+      <attributes/>
+    </object-type>
+  </object-types>
+
+  <event-types>
+    <event-type name="collect">  
+      <attributes/>
+    </event-type>
+    <event-type name="assemble_w"> 
+      <attributes/>
+    </event-type>
+    <event-type name="assemble_h"> </event-type>
+      <attributes/>
+  </event-types>
+  
+  <objects>
+    <object id="f1" type="frame">
+      <attributes/> 
+      <objects>
+        <relationship object-id="w1" qualifier="Assembled together"/>
+        <relationship object-id="w2" qualifier="Assembled together"/>
+      </objects>
+    </object>
+    <object id="f2" type="frame"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="w3" qualifier="Assembled together"/>
+        <relationship object-id="w4" qualifier="Assembled together"/>
+      </objects>
+    </object>
+    <object id="h1" type="handle">
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+    <object id="h2" type="handle"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+    <object id="w1" type="wheel"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+    <object id="w2" type="wheel"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+    <object id="w3" type="wheel"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+    <object id="w4" type="wheel"> 
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" qualifier="Attached to frame"/>
+      </objects>
+    </object>
+  </objects>
+
+  <events>
+    <event id="e1" type="collect" time="2025-01-05T10:00:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" relationship="frame" qualifier="Frame ready for collection"/>
+        <relationship object-id="h1" relationship="handle" qualifier="Handle ready for collection"/>
+        <relationship object-id="w1" relationship="wheel" qualifier="Wheel ready for collection"/>
+        <relationship object-id="w2" relationship="wheel" qualifier="Wheel ready for collection"/>
+      </objects>
+    </event>
+    <event id="e2" type="assemble_w" time="2025-01-05T10:05:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" relationship="frame" qualifier="Assembling frame with wheels"/>
+        <relationship object-id="w1" relationship="wheel" qualifier="Assembling wheel to frame"/>
+        <relationship object-id="w2" relationship="wheel" qualifier="Assembling wheel to frame"/>
+      </objects>
+    </event>
+    <event id="e3" type="assemble_h" time="2025-01-05T10:10:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f1" relationship="frame" qualifier="Assembling frame with handle"/>
+        <relationship object-id="h1" relationship="handle" qualifier="Attaching handle to frame"/>
+      </objects>
+    </event>
+    <event id="e4" type="collect" time="2025-01-05T10:15:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" relationship="frame" qualifier="Frame ready for collection"/>
+        <relationship object-id="h2" relationship="handle" qualifier="Handle ready for collection"/>
+        <relationship object-id="w3" relationship="wheel" qualifier="Wheel ready for collection"/>
+        <relationship object-id="w4" relationship="wheel" qualifier="Wheel ready for collection"/>
+      </objects>
+    </event>
+    <event id="e5" type="assemble_h" time="2025-01-05T10:20:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" relationship="frame" qualifier="Assembling frame with handle"/>
+        <relationship object-id="h2" relationship="handle" qualifier="Attaching handle to frame"/>
+      </objects>
+    </event>
+    <event id="e6" type="assemble_w" time="2025-01-05T10:25:00Z">
+      <attributes/>
+      <objects>
+        <relationship object-id="f2" relationship="frame" qualifier="Assembling frame with wheels"/>
+        <relationship object-id="w3" relationship="wheel" qualifier="Assembling wheel to frame"/>
+        <relationship object-id="w4" relationship="wheel" qualifier="Assembling wheel to frame"/>
+      </objects>
+    </event>
+  </events>
+</log>
