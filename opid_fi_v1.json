@@ -3,75 +3,75 @@
     "places": [
         {
             "name": "place_0",
-            "objectType": "frame",
-            "initial": false,
+            "objectType": "handle",
+            "initial": true,
             "final": false
         },
         {
             "name": "place_1",
-            "objectType": "frame",
+            "objectType": "handle",
             "initial": false,
             "final": false
         },
         {
             "name": "place_2",
-            "objectType": "frame",
-            "initial": true,
-            "final": false
-        },
-        {
-            "name": "place_3",
-            "objectType": "frame",
+            "objectType": "handle",
             "initial": false,
             "final": true
         },
         {
-            "name": "place_4",
-            "objectType": "frame",
-            "initial": false,
+            "name": "place_3",
+            "objectType": "wheel",
+            "initial": true,
             "final": false
         },
         {
+            "name": "place_4",
+            "objectType": "wheel",
+            "initial": false,
+            "final": true
+        },
+        {
             "name": "place_5",
-            "objectType": "frame",
+            "objectType": "wheel",
             "initial": false,
             "final": false
         },
         {
             "name": "place_6",
-            "objectType": "wheel",
-            "initial": true,
-            "final": false
+            "objectType": "frame",
+            "initial": false,
+            "final": true
         },
         {
             "name": "place_7",
-            "objectType": "wheel",
+            "objectType": "frame",
             "initial": false,
             "final": false
         },
         {
             "name": "place_8",
-            "objectType": "wheel",
+            "objectType": "frame",
             "initial": false,
-            "final": true
+            "final": false
         },
         {
             "name": "place_9",
-            "objectType": "handle",
+            "objectType": "frame",
             "initial": true,
             "final": false
         },
         {
             "name": "place_10",
-            "objectType": "handle",
+            "objectType": "frame",
             "initial": false,
             "final": false
         },
         {
             "name": "place_11",
-            "objectType": "handle",
+            "objectType": "frame",
             "initial": false,
-            "final": true
+            "final": false
         },
         {
             "name": "('wheel', 'frame')",
@@ -82,14 +82,14 @@
     ],
     "transitions": [
         {
-            "name": "assemble_w",
-            "label": "assemble_w_MAINTAIN",
+            "name": "collect",
+            "label": "collect_CREATE",
             "silent": false,
             "properties": {}
         },
         {
-            "name": "collect",
-            "label": "collect_CREATE",
+            "name": "assemble_w",
+            "label": "assemble_w_MAINTAIN",
             "silent": false,
             "properties": {}
         },
@@ -100,43 +100,43 @@
             "properties": {}
         },
         {
+            "name": "tau_end_handle_71516555-a390-4818-83e8-c612d0ad02ba",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_start_handle_d9c1ca28-1490-49b8-81cb-e86240626cdf",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_end_wheel_3482806d-3bad-44a7-a248-0294ed65867d",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_start_wheel_5a02bbd1-cd5e-47ad-be32-3fd7c49763e1",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
             "name": "tauJoin_2",
             "label": "tauJoin_2",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_end_frame_cdfa4498-520c-4471-86ab-d9790420de6b",
+            "name": "tau_end_frame_4e619c4a-cf78-4dbc-bab4-c9972f9f7b99",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_frame_6f117f11-efc0-4588-b03a-3cb4dec00183",
-            "label": "",
-            "silent": true,
-            "properties": {}
-        },
-        {
-            "name": "tau_end_wheel_ebade0db-97a0-4ffa-8978-6987ebfc0c56",
-            "label": "",
-            "silent": true,
-            "properties": {}
-        },
-        {
-            "name": "tau_start_wheel_a9ed180f-aec4-473d-ab14-551d00a7d2dd",
-            "label": "",
-            "silent": true,
-            "properties": {}
-        },
-        {
-            "name": "tau_end_handle_d1eebd5b-16f7-4a77-9965-a215b9e06437",
-            "label": "",
-            "silent": true,
-            "properties": {}
-        },
-        {
-            "name": "tau_start_handle_5004322f-0348-454e-b2a5-f6beee370a8a",
+            "name": "tau_start_frame_054b5596-1bdf-4f01-a0e8-df4612972d10",
             "label": "",
             "silent": true,
             "properties": {}
@@ -144,116 +144,80 @@
     ],
     "arcs": [
         {
-            "source": "place_2",
+            "source": "place_0",
             "target": "collect",
             "weight": "1.0",
             "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "tauJoin_2",
-            "target": "place_3",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_4",
-            "target": "assemble_w",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_5",
-            "target": "assemble_h",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
+            "inscription": "h",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "assemble_h",
+            "target": "place_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
             "target": "place_1",
             "weight": "1.0",
             "variable": false,
-            "inscription": "f",
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_1",
+            "target": "assemble_h",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_2",
+            "target": "tau_end_handle_71516555-a390-4818-83e8-c612d0ad02ba",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tau_start_handle_d9c1ca28-1490-49b8-81cb-e86240626cdf",
+            "target": "place_0",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_3",
+            "target": "collect",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_w",
+            "target": "place_4",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "collect",
             "target": "place_5",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_0",
-            "target": "tauJoin_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "assemble_w",
-            "target": "place_0",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
-            "target": "place_4",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_1",
-            "target": "tauJoin_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_3",
-            "target": "tau_end_frame_cdfa4498-520c-4471-86ab-d9790420de6b",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "tau_start_frame_6f117f11-efc0-4588-b03a-3cb4dec00183",
-            "target": "place_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "v_f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_6",
-            "target": "collect",
             "weight": "4.0",
             "variable": true,
             "inscription": "W",
@@ -261,7 +225,7 @@
             "bidirectional": false
         },
         {
-            "source": "place_7",
+            "source": "place_5",
             "target": "assemble_w",
             "weight": "4.0",
             "variable": true,
@@ -270,26 +234,8 @@
             "bidirectional": false
         },
         {
-            "source": "assemble_w",
-            "target": "place_8",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
-            "target": "place_7",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_8",
-            "target": "tau_end_wheel_ebade0db-97a0-4ffa-8978-6987ebfc0c56",
+            "source": "place_4",
+            "target": "tau_end_wheel_3482806d-3bad-44a7-a248-0294ed65867d",
             "weight": "1.0",
             "variable": false,
             "inscription": "w",
@@ -297,11 +243,29 @@
             "bidirectional": false
         },
         {
-            "source": "tau_start_wheel_a9ed180f-aec4-473d-ab14-551d00a7d2dd",
-            "target": "place_6",
+            "source": "tau_start_wheel_5a02bbd1-cd5e-47ad-be32-3fd7c49763e1",
+            "target": "place_3",
             "weight": "1.0",
             "variable": false,
             "inscription": "v_w",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tauJoin_2",
+            "target": "place_6",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_11",
+            "target": "tauJoin_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
@@ -310,16 +274,43 @@
             "target": "collect",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "place_8",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_7",
+            "target": "tauJoin_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_10",
-            "target": "assemble_h",
+            "target": "assemble_w",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_w",
+            "target": "place_7",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
@@ -328,7 +319,16 @@
             "target": "place_10",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_8",
+            "target": "assemble_h",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
@@ -337,25 +337,34 @@
             "target": "place_11",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "place_11",
-            "target": "tau_end_handle_d1eebd5b-16f7-4a77-9965-a215b9e06437",
+            "source": "place_6",
+            "target": "tau_end_frame_4e619c4a-cf78-4dbc-bab4-c9972f9f7b99",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "f",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "tau_start_handle_5004322f-0348-454e-b2a5-f6beee370a8a",
+            "source": "tau_start_frame_054b5596-1bdf-4f01-a0e8-df4612972d10",
             "target": "place_9",
             "weight": "1.0",
             "variable": false,
-            "inscription": "v_h",
+            "inscription": "v_f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "('wheel', 'frame')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Create_(W,f)",
             "properties": {},
             "bidirectional": false
         },
@@ -367,15 +376,6 @@
             "inscription": "Maintain_(W,f)",
             "properties": {},
             "bidirectional": true
-        },
-        {
-            "source": "collect",
-            "target": "('wheel', 'frame')",
-            "weight": true,
-            "variable": true,
-            "inscription": "Create_(W,f)",
-            "properties": {},
-            "bidirectional": false
         }
     ],
     "properties": {

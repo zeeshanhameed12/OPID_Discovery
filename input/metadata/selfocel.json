@@ -7,9 +7,7 @@
 },
     "relationships": {
       "many-to-one": [
-        ["wheel", "frame"]
-      ],
-      "one-to-one": [
+        ["wheel", "frame"],
         ["frame", "handlebar"]
       ]
     }
