@@ -17,7 +17,8 @@ verbose = True
 
 def load_ocel_log(filename):
     """Load the OCEL log from the provided file."""
-    return pm4py.read_ocel2_xml(filename)
+    return pm4py.read_ocel2_xml(filename) if "xml" in filename \
+        else pm4py.read_ocel2_json(filename)
 
 def get_all_events_for_object(o, otype, ocel):
     relations = ocel.relations.drop('ocel:qualifier', axis=1)

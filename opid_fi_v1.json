@@ -3,379 +3,489 @@
     "places": [
         {
             "name": "place_0",
-            "objectType": "handle",
+            "objectType": "item",
             "initial": true,
             "final": false
         },
         {
             "name": "place_1",
-            "objectType": "handle",
+            "objectType": "item",
             "initial": false,
             "final": false
         },
         {
             "name": "place_2",
-            "objectType": "handle",
+            "objectType": "item",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_3",
+            "objectType": "item",
             "initial": false,
             "final": true
         },
         {
-            "name": "place_3",
-            "objectType": "wheel",
+            "name": "place_4",
+            "objectType": "order",
             "initial": true,
             "final": false
         },
         {
-            "name": "place_4",
-            "objectType": "wheel",
-            "initial": false,
-            "final": true
-        },
-        {
             "name": "place_5",
-            "objectType": "wheel",
+            "objectType": "order",
             "initial": false,
             "final": false
         },
         {
             "name": "place_6",
-            "objectType": "frame",
+            "objectType": "order",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_7",
+            "objectType": "order",
             "initial": false,
             "final": true
         },
         {
-            "name": "place_7",
-            "objectType": "frame",
-            "initial": false,
-            "final": false
-        },
-        {
-            "name": "place_8",
-            "objectType": "frame",
-            "initial": false,
-            "final": false
-        },
-        {
-            "name": "place_9",
-            "objectType": "frame",
-            "initial": true,
-            "final": false
-        },
-        {
-            "name": "place_10",
-            "objectType": "frame",
-            "initial": false,
-            "final": false
-        },
-        {
-            "name": "place_11",
-            "objectType": "frame",
-            "initial": false,
-            "final": false
-        },
-        {
-            "name": "('wheel', 'frame')",
-            "objectType": "('wheel', 'frame')",
+            "name": "('item', 'order')",
+            "objectType": "('item', 'order')",
             "initial": false,
             "final": false
         }
     ],
     "transitions": [
         {
-            "name": "collect",
-            "label": "collect_CREATE",
+            "name": "create-order",
+            "label": "create-order_CREATE",
+            "caption": "create order",
             "silent": false,
             "properties": {}
         },
         {
-            "name": "assemble_w",
-            "label": "assemble_w_MAINTAIN",
+            "name": "ship-order",
+            "label": "ship-order_MAINTAIN",
+            "caption": "ship order",
             "silent": false,
             "properties": {}
         },
         {
-            "name": "assemble_h",
-            "label": "assemble_h",
+            "name": "change-order",
+            "label": "change-order_CREATE_DELETE_MAINTAIN",
+            "caption": "change order",
             "silent": false,
             "properties": {}
         },
         {
-            "name": "tau_end_handle_71516555-a390-4818-83e8-c612d0ad02ba",
+            "name": "skip_1",
+            "label": "skip_1",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "skip_2",
+            "label": "skip_2",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "skip_3",
+            "label": "skip_3",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_end_item_55123a67-0059-4c6d-bd5f-27676bc73e13",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_handle_d9c1ca28-1490-49b8-81cb-e86240626cdf",
+            "name": "tau_start_item_f12180a8-ea41-4e2e-b448-2d61ee872fa9",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_end_wheel_3482806d-3bad-44a7-a248-0294ed65867d",
+            "name": "tau_end_order_af8f2a09-ed53-4a8c-be35-371a52a783d5",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_wheel_5a02bbd1-cd5e-47ad-be32-3fd7c49763e1",
+            "name": "tau_start_order_a1628eb5-4fc9-4876-a2bc-2ea6506b5b4d",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tauJoin_2",
-            "label": "tauJoin_2",
-            "silent": true,
+            "name": "change-order_CREATE_MAINTAIN",
+            "label": "change-order_CREATE_MAINTAIN",
+            "caption": "change order",
+            "silent": false,
             "properties": {}
         },
         {
-            "name": "tau_end_frame_4e619c4a-cf78-4dbc-bab4-c9972f9f7b99",
-            "label": "",
-            "silent": true,
-            "properties": {}
-        },
-        {
-            "name": "tau_start_frame_054b5596-1bdf-4f01-a0e8-df4612972d10",
-            "label": "",
-            "silent": true,
+            "name": "change-order_CREATE_DELETE",
+            "label": "change-order_CREATE_DELETE",
+            "caption": "change order",
+            "silent": false,
             "properties": {}
         }
     ],
     "arcs": [
         {
             "source": "place_0",
-            "target": "collect",
+            "target": "skip_1",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "i",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "assemble_h",
-            "target": "place_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "h",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
+            "source": "create-order",
             "target": "place_1",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "h",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_1",
-            "target": "assemble_h",
+            "target": "skip_2",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "i",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_1",
+            "target": "change-order",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order",
+            "target": "place_2",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "ship-order",
+            "target": "place_3",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "skip_1",
+            "target": "place_1",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "i",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_0",
+            "target": "create-order",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "skip_2",
+            "target": "place_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "i",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_2",
-            "target": "tau_end_handle_71516555-a390-4818-83e8-c612d0ad02ba",
+            "target": "skip_3",
             "weight": "1.0",
             "variable": false,
-            "inscription": "h",
+            "inscription": "i",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "tau_start_handle_d9c1ca28-1490-49b8-81cb-e86240626cdf",
-            "target": "place_0",
+            "source": "skip_3",
+            "target": "place_3",
             "weight": "1.0",
             "variable": false,
-            "inscription": "v_h",
+            "inscription": "i",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_2",
+            "target": "ship-order",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_3",
-            "target": "collect",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
+            "target": "tau_end_item_55123a67-0059-4c6d-bd5f-27676bc73e13",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "i",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "assemble_w",
-            "target": "place_4",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
-            "target": "place_5",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_5",
-            "target": "assemble_w",
-            "weight": "4.0",
-            "variable": true,
-            "inscription": "W",
+            "source": "tau_start_item_f12180a8-ea41-4e2e-b448-2d61ee872fa9",
+            "target": "place_0",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_i",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_4",
-            "target": "tau_end_wheel_3482806d-3bad-44a7-a248-0294ed65867d",
+            "target": "create-order",
             "weight": "1.0",
             "variable": false,
-            "inscription": "w",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "tau_start_wheel_5a02bbd1-cd5e-47ad-be32-3fd7c49763e1",
-            "target": "place_3",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "v_w",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "tauJoin_2",
-            "target": "place_6",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_11",
-            "target": "tauJoin_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_9",
-            "target": "collect",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
-            "target": "place_8",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_7",
-            "target": "tauJoin_2",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_10",
-            "target": "assemble_w",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "assemble_w",
-            "target": "place_7",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "collect",
-            "target": "place_10",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "place_8",
-            "target": "assemble_h",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
-            "properties": {},
-            "bidirectional": false
-        },
-        {
-            "source": "assemble_h",
-            "target": "place_11",
-            "weight": "1.0",
-            "variable": false,
-            "inscription": "f",
+            "inscription": "o",
             "properties": {},
             "bidirectional": false
         },
         {
             "source": "place_6",
-            "target": "tau_end_frame_4e619c4a-cf78-4dbc-bab4-c9972f9f7b99",
+            "target": "ship-order",
             "weight": "1.0",
             "variable": false,
-            "inscription": "f",
+            "inscription": "o",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "tau_start_frame_054b5596-1bdf-4f01-a0e8-df4612972d10",
-            "target": "place_9",
+            "source": "change-order",
+            "target": "place_6",
             "weight": "1.0",
             "variable": false,
-            "inscription": "v_f",
+            "inscription": "o",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "collect",
-            "target": "('wheel', 'frame')",
-            "weight": true,
-            "variable": true,
-            "inscription": "Create_(W,f)",
+            "source": "place_5",
+            "target": "change-order",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
             "properties": {},
             "bidirectional": false
         },
         {
-            "source": "assemble_w",
-            "target": "('wheel', 'frame')",
+            "source": "create-order",
+            "target": "place_5",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "ship-order",
+            "target": "place_7",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_7",
+            "target": "tau_end_order_af8f2a09-ed53-4a8c-be35-371a52a783d5",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tau_start_order_a1628eb5-4fc9-4876-a2bc-2ea6506b5b4d",
+            "target": "place_4",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_1",
+            "target": "change-order_CREATE_MAINTAIN",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order_CREATE_MAINTAIN",
+            "target": "place_2",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order_CREATE_MAINTAIN",
+            "target": "place_6",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_5",
+            "target": "change-order_CREATE_MAINTAIN",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_1",
+            "target": "change-order_CREATE_DELETE",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order_CREATE_DELETE",
+            "target": "place_2",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "I",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order_CREATE_DELETE",
+            "target": "place_6",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_5",
+            "target": "change-order_CREATE_DELETE",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "o",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "create-order",
+            "target": "('item', 'order')",
             "weight": true,
             "variable": true,
-            "inscription": "Maintain_(W,f)",
+            "inscription": "Create_(I,o)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "ship-order",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Maintain_(I,o)",
             "properties": {},
             "bidirectional": true
+        },
+        {
+            "source": "change-order",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Create_(I,o)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "('item', 'order')",
+            "target": "change-order",
+            "weight": true,
+            "variable": true,
+            "inscription": "Delete_(I,o)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Maintain_(I,o)",
+            "properties": {},
+            "bidirectional": true
+        },
+        {
+            "source": "change-order_CREATE_MAINTAIN",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Create_(I,o)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "change-order_CREATE_MAINTAIN",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Maintain_(I,o)",
+            "properties": {},
+            "bidirectional": true
+        },
+        {
+            "source": "change-order_CREATE_DELETE",
+            "target": "('item', 'order')",
+            "weight": true,
+            "variable": true,
+            "inscription": "Create_(I,o)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "('item', 'order')",
+            "target": "change-order_CREATE_DELETE",
+            "weight": true,
+            "variable": true,
+            "inscription": "Delete_(I,o)",
+            "properties": {},
+            "bidirectional": false
         }
     ],
     "properties": {

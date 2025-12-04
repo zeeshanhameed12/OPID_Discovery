@@ -126,7 +126,7 @@ def discover_opid(ocel, object_type_pair, classification_activity):
                     variable=True,
                     inscription=f"Create_({object_type_pair[0][0].capitalize()},{object_type_pair[1][0]})"
                 ))
-            elif "DELETE" in label:
+            if "DELETE" in label:
                 opid.add_arc(Arc(
                     source=pL1.name,
                     target=t.name,
@@ -134,7 +134,7 @@ def discover_opid(ocel, object_type_pair, classification_activity):
                     variable=True,
                     inscription=f"Delete_({object_type_pair[0][0].capitalize()},{object_type_pair[1][0]})"
                 ))
-            elif "MAINTAIN" in label:
+            if "MAINTAIN" in label:
                 opid.add_arc(Arc(
                     source=t.name,
                     target=pL1.name,
@@ -143,7 +143,7 @@ def discover_opid(ocel, object_type_pair, classification_activity):
                     inscription=f"Maintain_({object_type_pair[0][0].capitalize()},{object_type_pair[1][0]})",
                     bidirectional=True
                 ))
-            elif "UPDATE_PARENT" in label:
+            if "UPDATE_PARENT" in label:
                 # Update parent logic with arcs
                 for arc in opid.arcs:
                     if arc.target == t.name and arc.variable:

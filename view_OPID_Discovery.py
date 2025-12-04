@@ -17,6 +17,8 @@ def get_color_palette(object_types):
             int(rgb[0]*255), int(rgb[1]*255), int(rgb[2]*255)
         )
         palette[ot] = hex_color
+    palette["order"] = "#3541A5"
+    palette["item"] = "#259531"
     return palette
 
 # Extract all object types
@@ -50,7 +52,7 @@ for transition in ocpn_json["transitions"]:
     label = transition["label"] if not transition["silent"] else "τ"
     style = "dashed" if transition["silent"] else "filled"
     dot.node(transition["name"],
-             label=label,
+             label=transition["caption"] if "caption" in transition else transition["label"],
              shape="box",
              style=style)
 
