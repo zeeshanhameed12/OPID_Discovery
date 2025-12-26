@@ -3,19 +3,19 @@
     "places": [
         {
             "name": "place_0",
-            "objectType": "handle",
+            "objectType": "handlebar",
             "initial": true,
             "final": false
         },
         {
             "name": "place_1",
-            "objectType": "handle",
+            "objectType": "handlebar",
             "initial": false,
             "final": false
         },
         {
             "name": "place_2",
-            "objectType": "handle",
+            "objectType": "handlebar",
             "initial": false,
             "final": true
         },
@@ -94,37 +94,37 @@
             "properties": {}
         },
         {
+            "name": "assemble_h",
+            "label": "assemble_h_MAINTAIN",
+            "silent": false,
+            "properties": {}
+        },
+        {
             "name": "collect",
             "label": "collect_CREATE",
             "silent": false,
             "properties": {}
         },
         {
-            "name": "assemble_h",
-            "label": "assemble_h",
-            "silent": false,
-            "properties": {}
-        },
-        {
-            "name": "tau_end_handle_252ef777-c270-4693-a7af-2d2119c8d58d",
+            "name": "tau_end_handlebar_5ca7422b-a62c-4cdc-a92e-89ed0e61f8f2",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_handle_12561ecf-938b-48d0-a088-60f0d844fbee",
+            "name": "tau_start_handlebar_29f5aa67-bf34-4d19-9478-9d833e756dcf",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_end_wheel_8c808732-00b7-42d5-af06-41ac63f96cd4",
+            "name": "tau_end_wheel_05c95867-3bef-4693-9513-96d31ba4af23",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_wheel_be75978f-cf41-4a98-abfe-e772dbb196b2",
+            "name": "tau_start_wheel_d7851a9d-1d11-4357-aa82-fb31e5c26005",
             "label": "",
             "silent": true,
             "properties": {}
@@ -136,13 +136,13 @@
             "properties": {}
         },
         {
-            "name": "tau_end_frame_e4959bc5-a447-447b-829a-7afb66e65262",
+            "name": "tau_end_frame_47b88c3a-4192-4b3b-9841-71d81b3c1ccb",
             "label": "",
             "silent": true,
             "properties": {}
         },
         {
-            "name": "tau_start_frame_518237ae-86a8-403d-846e-61660f0f3edc",
+            "name": "tau_start_frame_be3a9fc4-f279-4a91-bf8e-2417a2f6c01b",
             "label": "",
             "silent": true,
             "properties": {}
@@ -187,7 +187,7 @@
         },
         {
             "source": "place_2",
-            "target": "tau_end_handle_252ef777-c270-4693-a7af-2d2119c8d58d",
+            "target": "tau_end_handlebar_5ca7422b-a62c-4cdc-a92e-89ed0e61f8f2",
             "weight": "1.0",
             "variable": false,
             "inscription": "h",
@@ -195,7 +195,7 @@
             "bidirectional": false
         },
         {
-            "source": "tau_start_handle_12561ecf-938b-48d0-a088-60f0d844fbee",
+            "source": "tau_start_handlebar_29f5aa67-bf34-4d19-9478-9d833e756dcf",
             "target": "place_0",
             "weight": "1.0",
             "variable": false,
@@ -241,7 +241,7 @@
         },
         {
             "source": "place_4",
-            "target": "tau_end_wheel_8c808732-00b7-42d5-af06-41ac63f96cd4",
+            "target": "tau_end_wheel_05c95867-3bef-4693-9513-96d31ba4af23",
             "weight": "1.0",
             "variable": false,
             "inscription": "w",
@@ -249,7 +249,7 @@
             "bidirectional": false
         },
         {
-            "source": "tau_start_wheel_be75978f-cf41-4a98-abfe-e772dbb196b2",
+            "source": "tau_start_wheel_d7851a9d-1d11-4357-aa82-fb31e5c26005",
             "target": "place_3",
             "weight": "1.0",
             "variable": false,
@@ -349,7 +349,7 @@
         },
         {
             "source": "place_6",
-            "target": "tau_end_frame_e4959bc5-a447-447b-829a-7afb66e65262",
+            "target": "tau_end_frame_47b88c3a-4192-4b3b-9841-71d81b3c1ccb",
             "weight": "1.0",
             "variable": false,
             "inscription": "f",
@@ -357,7 +357,7 @@
             "bidirectional": false
         },
         {
-            "source": "tau_start_frame_518237ae-86a8-403d-846e-61660f0f3edc",
+            "source": "tau_start_frame_be3a9fc4-f279-4a91-bf8e-2417a2f6c01b",
             "target": "place_7",
             "weight": "1.0",
             "variable": false,
@@ -385,6 +385,15 @@
         },
         {
             "source": "assemble_w",
+            "target": "('frame', 'handlebar')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Maintain_(F,h)",
+            "properties": {},
+            "bidirectional": true
+        },
+        {
+            "source": "assemble_h",
             "target": "('frame', 'handlebar')",
             "weight": false,
             "variable": true,

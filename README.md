@@ -20,6 +20,5 @@ pip install pm4py
 
 run e.g. as
 ```
- python main.py input/ocel/proceduretopay.xml input/metadata/proceduretopay.json
- python main.py input/ocel/selfocel.xml input/metadata/selfocel.json 
+python3 main.py input/bicycle_example/log.xml input/bicycle_example/reldata.json
 ```

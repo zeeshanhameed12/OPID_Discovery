@@ -6,8 +6,7 @@ from classify_activities import load_ocel_log, classify
 from OPID_Discovery import discover_opid
 
 # run e.g. as
-# python main.py input/ocel/proceduretopay.xml input/metadata/proceduretopay.json
-# python main.py input/ocel/selfocel.xml input/metadata/selfocel.json 
+# python3 main.py input/bicycle_example/log.xml input/bicycle_example/reldata.json
 def main():
     start_time = time.time()
     
@@ -32,7 +31,7 @@ def main():
             classification_data.append((many_type, one_type, activity_classes))
         
         discover_opid(ocel, classification_data)
-        print("Please run view_OPID_Discovery.py file to visualize the generated OPID for the object type pair:", (many_type, one_type))
+        print("Please run view_OPID_Discovery.py to visualize the generated OPID.")
 
     
     # Calculate execution time

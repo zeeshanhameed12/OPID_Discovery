@@ -1,0 +1,13 @@
+
+{
+    "reference types": { 
+        "create-order": "order",
+        "ship-order": "order", 
+        "change-order": "order"
+},
+    "relationships": {
+      "many-to-one": [
+        ["item", "order"]
+      ]
+    }
+}

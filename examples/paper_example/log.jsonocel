@@ -1,0 +1,253 @@
+{
+  "eventTypes": [
+    {
+      "name": "create-order",
+      "attributes": []
+    },
+    {
+      "name": "change-order",
+      "attributes": []
+    },
+    {
+      "name": "ship-order",
+      "attributes": []
+    },
+    {
+      "name": "archive-order",
+      "attributes": []
+    }
+  ],
+  "objectTypes": [
+    {
+      "name": "order",
+      "attributes": []
+    },
+    {
+      "name": "item",
+      "attributes": []
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "type": "create-order",
+      "time": "1970-01-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i1",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i2",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "change-order",
+      "time": "1970-01-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i1",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i3",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "ship-order",
+      "time": "1970-02-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i1",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i3",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "create-order",
+      "time": "1970-01-03T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i4",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "change-order",
+      "time": "1970-01-04T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i5",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "ship-order",
+      "time": "1970-02-05T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i5",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "create-order",
+      "time": "1970-05-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o3",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i6",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "change-order",
+      "time": "1970-06-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o3",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i6",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i7",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "ship-order",
+      "time": "1970-07-01T00:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "o3",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i6",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i7",
+          "qualifier": "item"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "o1",
+      "type": "order",
+      "attributes": []
+    },
+    {
+      "id": "o2",
+      "type": "order",
+      "attributes": []
+    },
+    {
+      "id": "o3",
+      "type": "order",
+      "attributes": []
+    },
+    {
+      "id": "i1",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i2",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i3",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i4",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i5",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i6",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i7",
+      "type": "item",
+      "attributes": []
+    },
+    {
+      "id": "i8",
+      "type": "item",
+      "attributes": []
+    }
+  ]
+}
