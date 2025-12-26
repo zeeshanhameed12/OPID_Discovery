@@ -1,4 +1,4 @@
-# OPID Discovery and Visualization
+# Object-Centric Processes with Dynamic Relationships
 
 ## Overview
 
