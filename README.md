@@ -20,5 +20,5 @@ pip install pm4py
 
 run e.g. as
 ```
-python3 main.py input/bicycle_example/log.xml input/bicycle_example/reldata.json
+python3 main.py examples/bicycle_example/log.xml examples/bicycle_example/reldata.json
 ```

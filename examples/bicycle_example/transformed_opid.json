@@ -1,0 +1,419 @@
+{
+    "name": "Self OCPN Export",
+    "places": [
+        {
+            "name": "place_0",
+            "objectType": "wheel",
+            "initial": true,
+            "final": false
+        },
+        {
+            "name": "place_1",
+            "objectType": "wheel",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_2",
+            "objectType": "wheel",
+            "initial": false,
+            "final": true
+        },
+        {
+            "name": "place_3",
+            "objectType": "handlebar",
+            "initial": true,
+            "final": false
+        },
+        {
+            "name": "place_4",
+            "objectType": "handlebar",
+            "initial": false,
+            "final": true
+        },
+        {
+            "name": "place_5",
+            "objectType": "handlebar",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_6",
+            "objectType": "frame",
+            "initial": false,
+            "final": true
+        },
+        {
+            "name": "place_7",
+            "objectType": "frame",
+            "initial": true,
+            "final": false
+        },
+        {
+            "name": "place_8",
+            "objectType": "frame",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_9",
+            "objectType": "frame",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_10",
+            "objectType": "frame",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "place_11",
+            "objectType": "frame",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "('wheel', 'frame')",
+            "objectType": "('wheel', 'frame')",
+            "initial": false,
+            "final": false
+        },
+        {
+            "name": "('frame', 'handlebar')",
+            "objectType": "('frame', 'handlebar')",
+            "initial": false,
+            "final": false
+        }
+    ],
+    "transitions": [
+        {
+            "name": "collect",
+            "label": "collect_CREATE",
+            "silent": false,
+            "properties": {}
+        },
+        {
+            "name": "assemble_h",
+            "label": "assemble_h_MAINTAIN",
+            "silent": false,
+            "properties": {}
+        },
+        {
+            "name": "assemble_w",
+            "label": "assemble_w_MAINTAIN",
+            "silent": false,
+            "properties": {}
+        },
+        {
+            "name": "tau_end_wheel_bb5beca8-7694-4efc-81ae-3525d3476217",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_start_wheel_86eda29d-d943-4427-803d-8b0ca62e6166",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_end_handlebar_98a7049a-62ee-4fe9-9402-3c7139a9bb9d",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_start_handlebar_10055f74-cefc-4125-9526-ae7402913fa2",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tauJoin_2",
+            "label": "tauJoin_2",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_end_frame_b8957310-a2ed-45c0-becd-c722d5128ebd",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        },
+        {
+            "name": "tau_start_frame_ad795501-8159-41cd-9995-7c62f26cbfff",
+            "label": "",
+            "silent": true,
+            "properties": {}
+        }
+    ],
+    "arcs": [
+        {
+            "source": "place_0",
+            "target": "collect",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_w",
+            "target": "place_2",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_1",
+            "target": "assemble_w",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "place_1",
+            "weight": "4.0",
+            "variable": true,
+            "inscription": "W",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_2",
+            "target": "tau_end_wheel_bb5beca8-7694-4efc-81ae-3525d3476217",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "w",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tau_start_wheel_86eda29d-d943-4427-803d-8b0ca62e6166",
+            "target": "place_0",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_w",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_3",
+            "target": "collect",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_h",
+            "target": "place_4",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_5",
+            "target": "assemble_h",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "place_5",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_4",
+            "target": "tau_end_handlebar_98a7049a-62ee-4fe9-9402-3c7139a9bb9d",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tau_start_handlebar_10055f74-cefc-4125-9526-ae7402913fa2",
+            "target": "place_3",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_h",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_11",
+            "target": "tauJoin_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_7",
+            "target": "collect",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "place_10",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tauJoin_2",
+            "target": "place_6",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_8",
+            "target": "tauJoin_2",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_9",
+            "target": "assemble_w",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_w",
+            "target": "place_8",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "place_9",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_10",
+            "target": "assemble_h",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_h",
+            "target": "place_11",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "place_6",
+            "target": "tau_end_frame_b8957310-a2ed-45c0-becd-c722d5128ebd",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "tau_start_frame_ad795501-8159-41cd-9995-7c62f26cbfff",
+            "target": "place_7",
+            "weight": "1.0",
+            "variable": false,
+            "inscription": "v_f",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "collect",
+            "target": "('wheel', 'frame')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Create_(W,f)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_w",
+            "target": "('wheel', 'frame')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Maintain_(W,f)",
+            "properties": {},
+            "bidirectional": true
+        },
+        {
+            "source": "collect",
+            "target": "('frame', 'handlebar')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Create_(F,h)",
+            "properties": {},
+            "bidirectional": false
+        },
+        {
+            "source": "assemble_h",
+            "target": "('frame', 'handlebar')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Maintain_(F,h)",
+            "properties": {},
+            "bidirectional": true
+        },
+        {
+            "source": "assemble_w",
+            "target": "('frame', 'handlebar')",
+            "weight": false,
+            "variable": true,
+            "inscription": "Maintain_(F,h)",
+            "properties": {},
+            "bidirectional": true
+        }
+    ],
+    "properties": {
+        "creator": "PM4Py",
+        "source": "OCPN Export",
+        "version": "1.0"
+    }
+}

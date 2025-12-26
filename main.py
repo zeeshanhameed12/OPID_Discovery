@@ -6,7 +6,7 @@ from classify_activities import load_ocel_log, classify
 from OPID_Discovery import discover_opid
 
 # run e.g. as
-# python3 main.py input/bicycle_example/log.xml input/bicycle_example/reldata.json
+# python3 main.py examples/bicycle_example/log.xml examples/bicycle_example/reldata.json
 def main():
     start_time = time.time()
     
