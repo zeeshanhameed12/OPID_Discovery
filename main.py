@@ -25,10 +25,13 @@ def main():
         relationship_data = json.load(f)
     
         # for now use the first many-to-one relationship mentioned in the relationship data 
-        (many_type, one_type) = relationship_data["relationships"]["many-to-one"][0]
-        activity_classes = classify(ocel, relationship_data, many_type, one_type)
+        reldata = relationship_data["relationships"]["many-to-one"]
+        classification_data = []
+        for (many_type, one_type) in reldata:
+            activity_classes = classify(ocel, relationship_data, many_type, one_type)
+            classification_data.append((many_type, one_type, activity_classes))
         
-        discover_opid(ocel, (many_type, one_type), activity_classes)
+        discover_opid(ocel, classification_data)
         print("Please run view_OPID_Discovery.py file to visualize the generated OPID for the object type pair:", (many_type, one_type))
 
     

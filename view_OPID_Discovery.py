@@ -3,7 +3,7 @@ from graphviz import Digraph
 import colorsys
 
 # === Step 1: Load OCPN JSON ===
-with open("opid_fi_v1.json", "r") as f:
+with open("transformed_opid.json", "r") as f:
     ocpn_json = json.load(f)
 
 # === Step 2: Assign consistent colors per object type ===

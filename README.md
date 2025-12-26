@@ -14,3 +14,12 @@ You can install the required dependencies by running:
 
 ```bash
 pip install pm4py
+```
+
+## Running the tool
+
+run e.g. as
+```
+ python main.py input/ocel/proceduretopay.xml input/metadata/proceduretopay.json
+ python main.py input/ocel/selfocel.xml input/metadata/selfocel.json 
+```
